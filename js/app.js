@@ -81,7 +81,7 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   let sumOfIndOneAndTwo = sum(sumArr[0], sumArr[1]);
   let totalSum = sum(sumOfIndOneAndTwo[0], sumArr[2]);
-  let str1 = `${testArray} was passed in as an array of numbers, and ${totalSum[0]} is their sum.`;
+  let str1 = `${sumArr} was passed in as an array of numbers, and ${totalSum[0]} is their sum.`;
   return [totalSum[0], str1];
 }
 
@@ -102,13 +102,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
+// function multiply(a, b) { //eslint-disable-line
+//   let product = a * b;
+//   let str = `The product of ${a} and ${b} is ${product}.`;
+//   return [product, str];
+// }
+
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  let aAndB = multiply(multArr[0], multArr[1]);
+  let multArrProduct = multiply(aAndB[0], multArr[2]);
+  let multiplyArrayStr = `The numbers ${multArr} have a product of ${multArrProduct[0]}.`;
+  return [multArrProduct[0], multiplyArrayStr];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
